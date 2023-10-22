@@ -1,0 +1,175 @@
+body{
+    background-image: url('../assets/party.jpg');
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+    text-align: center;
+}
+.page{
+    display: flex;
+    
+
+}
+
+
+.container{
+    display: flex;
+    width: 1000px;
+    transition: 0.5s;
+    margin: 50px;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    
+}
+header h1{
+    margin: 25px;
+}
+
+header .shopping{
+    position: relative;
+    text-align: right;
+}
+
+header .shopping img{
+    width: 30px;
+}
+header .shopping span{
+    background-color: brown;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-top: 50px;
+    margin: 25px;
+    
+}
+.card{
+    
+    display: inline-block;
+    margin-top: 150px;
+    float: right;
+    top: 0;
+    width: 30%;
+    background-color: rgb(241, 220, 246);
+    box-shadow: 0 50px 50px ;
+    border-radius: 10px;
+    height: 500px;
+    transition: 0.5s;
+    
+}
+
+.card h1{
+    color: rgb(132, 111, 195);
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.checkOut{
+    position: absolute;
+    background-color: rgb(132, 111, 195);
+    border-radius: 5px;
+    bottom: 0;
+    padding: 10px;
+    width: 27.5%;
+    transition: 0.5s;
+}
+.total {
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.list .item{
+    text-align: center;
+    background-color: rgb(241, 220, 246);
+    padding: 10px;
+    letter-spacing: 1px;
+    width: 130px;
+    box-shadow: 0 50px 50px ;
+    border-radius: 10px;
+    height: auto;
+
+        
+}
+
+.list .item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+.list .item .title{
+    font-weight: 600;
+    
+}
+.list .item .price{
+    margin: 10px;
+}
+.list .item .button{
+    background-color: rgb(132, 111, 195);
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+
+}
+
+.like{
+    background: none;
+    border: none;
+}
+
+.liked{
+    color: red;
+}
+
+.cartItems{
+    justify-content: space-evenly;
+    
+}
+
+.cartItems li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: black;
+    row-gap: 10px;
+    margin-bottom: 20px; 
+
+}
+
+.cartItems li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartItems button{
+    width: auto;
+    background-color: rgb(132, 111, 195) ;
+    border: none;
+    width: 15px;
+    height: 15px;
+}
+.cartItems .delete{
+    background: none;
+    border: none;
+}
+.cartItems .delete img{
+    width: 15px;
+    height: 15px;
+}
