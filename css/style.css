@@ -1,17 +1,16 @@
+/*styling the main page*/
 body{
     background-image: url('../assets/party.jpg');
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .title{
     text-align: center;
 }
 .page{
     display: flex;
-    
-
 }
 
-
+/*styling the container*/
 .container{
     display: flex;
     width: 1000px;
@@ -57,6 +56,7 @@ header .shopping span{
     margin: 25px;
     
 }
+/*styling the card content*/
 .card{
     
     display: inline-block;
@@ -105,9 +105,7 @@ header .shopping span{
     width: 130px;
     box-shadow: 0 50px 50px ;
     border-radius: 10px;
-    height: auto;
-
-        
+    height: auto;        
 }
 
 .list .item img{
@@ -138,7 +136,7 @@ header .shopping span{
 .liked{
     color: red;
 }
-
+/*styling the cart items*/
 .cartItems{
     justify-content: space-evenly;
     
@@ -169,7 +167,10 @@ header .shopping span{
     background: none;
     border: none;
 }
-.cartItems .delete img{
-    width: 15px;
-    height: 15px;
+
+/*styling the footer*/
+footer{
+    text-align: center;
+    color: gray;
+    margin-top: 20px;
 }

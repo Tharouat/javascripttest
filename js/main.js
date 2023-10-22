@@ -8,7 +8,7 @@ openShopping.addEventListener('click', ()=>{
     body.classList.add('active');
     console.log('Shopping cart opened.');
 });
-
+// container of the main page
 var products = [
     {
         id: 1,
@@ -53,7 +53,7 @@ var products = [
 
     },
 ]
-
+//my list cart
 var listCard = [];
 function initApp(){
     products.forEach((value, key)=>{
@@ -73,7 +73,7 @@ function initApp(){
 }
 
 initApp();
-
+//adding product to the card
 function addToCard(key){
     if(listCard[key]== null){
         listCard[key]= products[key];
@@ -82,7 +82,7 @@ function addToCard(key){
     reloadCard();
     console.log('Item added to the cart.');
 }
-
+//reloading the card and calculating
 function reloadCard() {
     cartItems.innerHTML = '';
     var count = 0;
@@ -102,7 +102,7 @@ function reloadCard() {
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
-                    <button class="delete" onclick="deleteItem(${key})"><img src="../assets/trash.png" alt="${value.image}"></button>
+                    <button class="delete" onclick="deleteItem(${key})"><i class="material-icons">delete</i></button>;
                 </div>
             `;
 
@@ -110,10 +110,11 @@ function reloadCard() {
         }
     });
 
-    total.innerText = totalPrice.toLocaleString(); // Display the total price
+    total.innerText = totalPrice.toLocaleString()+ ' TND'; // the total price
     quantity.innerText = count;
     console.log('Shopping cart reloaded.');
 }
+//changing quantity
 function changeQuantity(key, quantity) {
     if (quantity == 0){
         delete listCard[key];
@@ -123,13 +124,14 @@ function changeQuantity(key, quantity) {
    reloadCard();
    console.log('Quantity changed.');
 }
+//deleting items from the card
 function deleteItem(key) {
     if (listCard[key] != null) {
         listCard.splice(key, 1);
         reloadCard();
     }
 }
-
+//liking a product in the main page
 function toggleLike(productId, button) {
     var products = document.getElementById(productId);
 
