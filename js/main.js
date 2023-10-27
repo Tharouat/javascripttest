@@ -62,10 +62,10 @@ function initApp(){
         newDiv.classList.add('item')
         newDiv.innerHTML = `
         <img src="${imagePath}"/>
-        <button class="like" onclick="toggleLike('products', this)"> <span>❤</span></button>
+        <button class="like" onclick="toggleLike('products', this)"><span>❤</span></button>
         <div class="title">${value.name}</div>
-        <div class="price">${value.price.toLocaleString()}TND</div>
-        <button class="button" onclick="addToCard(${key})">Add To Card</button>
+        <div class="price">${value.price.toLocaleString()}TND </div>
+        <button class="button" onclick="addToCard(${key})"> Add To Card </button>
         `;
         list.appendChild(newDiv);
     });
@@ -120,9 +120,11 @@ function changeQuantity(key, quantity) {
         delete listCard[key];
    }else{
         listCard[key].quantity = quantity;
+        
    }
    reloadCard();
    console.log('Quantity changed.');
+
 }
 //deleting items from the card
 function deleteItem(key) {
